@@ -18,3 +18,8 @@ body{
     left: 10px;
     user-select: none; /*empécher d'être séléction par le joueur*/
 }
+
+#target i {
+    color: red;
+}
+
