@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body{
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        button{
+            background-color: #fff;
+            border: 0;
+        }
+        header{
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            display: none;
+        }
+        header a{
+            color: black;
+            display: block;
+            text-align: right;
+        }
+        header.opened{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <strong>logo</strong>
+        <button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+    <header class="opened">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contacts</a>
+    </header>
+    <h1>Mon site web</h1>
+    <script>
+        const navButton = document.querySelector("button");
+
+        navButton.addEventListener("click", function(){
+            //alert('click')
+            document.querySelector("header").classList.toggle("opened")
+        })
+    </script>
+</body>
+</html>
